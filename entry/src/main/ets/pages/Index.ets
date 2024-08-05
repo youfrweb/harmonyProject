@@ -1,5 +1,8 @@
+import Activity from '../views/Activity'
 import Classify from '../views/Classify'
 import Home from '../views/Home'
+import ShoppingCart from '../views/ShoppingCart'
+import UserCenter from '../views/UserCenter'
 
 interface MenuItemType {
   icon: string,
@@ -9,7 +12,7 @@ interface MenuItemType {
 @Entry
 @Component
 struct Index {
-  @State currentIndex: number = 0
+  @State currentIndex: number = 4
   @State menus: MenuItemType[] = [
     { icon: 'ic_public_home_filled', text: '首页' },
     { icon: 'ic_public_view_grid', text: '分页' },
@@ -38,8 +41,12 @@ struct Index {
       Home()
     } else if (index === 1) {
       Classify()
+    } else if (index === 2) {
+      Activity()
+    } else if (index === 3) {
+      ShoppingCart()
     } else {
-      Text(index.toString())
+      UserCenter()
     }
   }
 
@@ -64,7 +71,5 @@ struct Index {
       })
     }
     .height('100%')
-
-    // .backgroundColor('#f1f3f5')
   }
 }
