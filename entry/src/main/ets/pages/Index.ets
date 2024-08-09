@@ -4,6 +4,10 @@ import Home from '../views/Home'
 import ShoppingCart from '../views/ShoppingCart'
 import UserCenter from '../views/UserCenter'
 
+import { AxiosError, AxiosResponse } from '@ohos/axios';
+import IndexApi from '../api/home';
+import request from '../api/httpRequest'
+
 interface MenuItemType {
   icon: string,
   text: string
@@ -12,7 +16,7 @@ interface MenuItemType {
 @Entry
 @Component
 struct Index {
-  @State currentIndex: number = 4
+  @State currentIndex: number = 0
   @State menus: MenuItemType[] = [
     { icon: 'ic_public_home_filled', text: '首页' },
     { icon: 'ic_public_view_grid', text: '分页' },
@@ -20,6 +24,17 @@ struct Index {
     { icon: 'ic_public_appstore', text: '购物车' },
     { icon: 'ic_public_contacts', text: '我的' },
   ]
+
+  aboutToAppear(): void {
+    // request()
+    console.log('333', IndexApi.getList())
+    IndexApi.getList().then((res: AxiosResponse) => {
+      // AlertDialog.show({message: '1123'})
+      console.log('list数据', res)
+    }).catch((err: AxiosError)=>{
+      console.log('444', err)
+    })
+  }
 
   // 菜单样式
   @Builder

@@ -1,4 +1,5 @@
 import GoodPick from './components/common/GoodPick'
+import { router } from '@kit.ArkUI'
 
 @Component
 struct UserCenter {
@@ -17,11 +18,17 @@ struct UserCenter {
       // 用户基础信息
       Row(){
         Image($r('app.media.startIcon'))
+        // Image('/assets/image/car.png') // 也可以放在这里
           .width(50)
           .borderRadius(25)
           .margin({left: 20,right: 10})
         Text('登录/注册')
           .fontWeight(600)
+          .onClick(() => {
+            router.pushUrl({
+              url: 'pages/Login'
+            })
+          })
       }
       .width('100%')
       .justifyContent(FlexAlign.Start)

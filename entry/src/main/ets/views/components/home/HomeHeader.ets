@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI'
+
 @Component
 struct HomeHeader {
   build() {
@@ -26,6 +28,11 @@ struct HomeHeader {
         .width(28)
       Text('登录')
         .fontSize(16)
+        .onClick(() => {
+          router.pushUrl({
+            url: 'pages/Login'
+          })
+        })
     }
     .width('100%')
     .height(58)
