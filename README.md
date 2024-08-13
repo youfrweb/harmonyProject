@@ -1,4 +1,4 @@
-## <center> harmonyOs Project ArkTs 仿华为商城
+# <center> harmonyOs Project ArkTs 仿华为商城
 
 选华为商城作为模仿对象，页面包含了各种元素、方法使用，便于全面学习理解
 
