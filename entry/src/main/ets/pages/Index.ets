@@ -6,7 +6,7 @@ import UserCenter from '../views/UserCenter'
 
 import { AxiosError, AxiosResponse } from '@ohos/axios';
 import IndexApi from '../api/home';
-import request from '../api/httpRequest'
+import CommonCss from '../style/commonCss'
 
 interface MenuItemType {
   icon: string,
@@ -26,13 +26,11 @@ struct Index {
   ]
 
   aboutToAppear(): void {
-    // request()
-    console.log('333', IndexApi.getList())
+    // 请求案例
     IndexApi.getList().then((res: AxiosResponse) => {
-      // AlertDialog.show({message: '1123'})
       console.log('list数据', res)
     }).catch((err: AxiosError)=>{
-      console.log('444', err)
+      console.log('err', err)
     })
   }
 
@@ -76,7 +74,7 @@ struct Index {
         })
       }
       .animationDuration(0)
-      .barBackgroundColor('#f1f3f5')
+      .barBackgroundColor(CommonCss.BG_COLOR)
       .onChange((index: number) => {
         this.currentIndex = index
       })

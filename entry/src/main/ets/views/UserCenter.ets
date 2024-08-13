@@ -1,5 +1,6 @@
 import GoodPick from './components/common/GoodPick'
 import { router } from '@kit.ArkUI'
+import CommonCss from '../style/commonCss'
 
 @Component
 struct UserCenter {
@@ -17,7 +18,7 @@ struct UserCenter {
 
       // 用户基础信息
       Row(){
-        Image($r('app.media.startIcon'))
+        Image($r('app.media.ic_header_logo'))
         // Image('/assets/image/car.png') // 也可以放在这里
           .width(50)
           .borderRadius(25)
@@ -233,7 +234,7 @@ struct UserCenter {
       GoodPick()
         .margin({left: 15, right: 15})
     }
-    .backgroundColor('#f1f3f5')
+    .backgroundColor(CommonCss.BG_COLOR)
   }
 }
 export default UserCenter
