@@ -3,6 +3,7 @@
 选华为商城作为模仿对象，页面包含了各种元素、方法使用，便于全面学习理解
 
 **主要包括以下功能模块：**
+
 1. 首页（轮播图、横向滚动菜单等）
 2. 分类（列表）
 3. 发现
@@ -14,6 +15,7 @@
 9. 页面跳转
 
 **效果图**
+
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage01.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage02.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage03.png)
