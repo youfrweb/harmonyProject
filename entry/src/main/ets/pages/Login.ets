@@ -1,11 +1,22 @@
 import { router } from '@kit.ArkUI';
 
+interface ParamsType {
+  label: string
+}
+
 @Entry
 @Component
-struct Index {
+struct Login {
   @State message: string = '登录帐号以使用云空间、应用市场及更多服务';
   @State isCodeLoginShow: boolean = true
+  @State addressLabel: string = '中国 +86'
   title: string = '华为帐号'
+
+  aboutToAppear(): void {
+    if(router.getParams() !== undefined){
+      this.addressLabel = (router.getParams() as ParamsType).label
+    }
+  }
 
   build() {
     Column() {
@@ -27,7 +38,7 @@ struct Index {
           Text('国家/地区')
             .fontColor('#666')
           Row() {
-            Text('中国 +86')
+            Text(this.addressLabel)
               .fontColor('#666')
             Image($r('app.media.ic_public_arrow_right'))
               .width(20)
@@ -35,7 +46,7 @@ struct Index {
           }
           .onClick(() => {
             router.pushUrl({
-              url: 'pages/CountryRegion'
+              url: 'pages/CountryRegion',
             })
           })
         }
@@ -47,15 +58,17 @@ struct Index {
         TextInput({
           placeholder: '手机号'
         })
+          .maxLength(20)
+          .type(InputType.Number)
         Row({ space: 10 }) {
           TextInput({
             placeholder: '短信验证码'
           })
             .width('60%')
+            .type(InputType.Number)
           Button('获取验证码')
             .buttonStyle(ButtonStyleMode.NORMAL)
-            .onClick(() => {
-            })
+            .onClick(() => { })
         }
         .margin({ top: 20, bottom: 30 })
         .width('100%')
@@ -76,6 +89,8 @@ struct Index {
         TextInput({
           placeholder: '手机号'
         })
+          .maxLength(20)
+          .type(InputType.Number)
         TextInput({
           placeholder: '密码'
         }).type(InputType.Password)

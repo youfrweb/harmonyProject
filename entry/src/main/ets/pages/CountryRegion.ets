@@ -49,24 +49,26 @@ struct CountryRegion {
       })
       .margin(15)
 
-      Text('已开通服务的国家和地区：')
+      Text('已支持短信验证码登录的国家/地区')
         .width('100%')
+        .fontColor('#666')
         .padding({left: 15})
-      Row(){
-        Text('已开通')
-        Text('已选')
-          .padding({right: 15})
-      }
-      .width('100%')
-      .justifyContent(FlexAlign.SpaceBetween)
-      // .padding({left: 15, right: 15})
-      .padding(15)
-      .border({
-        width: {bottom: 1},
-        color: '#ccc'
-      })
 
+      // Row(){
+      //   Text('已开通')
+      //   Text('已选')
+      //     .padding({right: 15})
+      // }
+      // .width('100%')
+      // .justifyContent(FlexAlign.SpaceBetween)
+      // // .padding({left: 15, right: 15})
+      // .padding(15)
+      // .border({
+      //   width: {bottom: 1},
+      //   color: '#ccc'
+      // })
 
+      // 列表
       List({ space: 20, initialIndex: 0, scroller: this.scrollerForList }) {
         ForEach(Object.keys(orderByLetter), (item: string) => {
           ListItemGroup({ header: this.itemHead(item) }) {
@@ -76,8 +78,17 @@ struct CountryRegion {
                   .width("100%")
                   .height(50)
                   .fontSize(18)
+                  .fontColor('#666')
                   .backgroundColor(0xFFFFFF)
               }
+              .onClick(() => {
+                router.replaceUrl({
+                  url: 'pages/Login',
+                  params: {
+                    label: order.label
+                  }
+                })
+              })
             })
           }
           .divider({ strokeWidth: 1, color: '#ccc' }) // 每行之间的分界线
@@ -110,5 +121,3 @@ struct CountryRegion {
     }
   }
 }
-
-export default CountryRegion

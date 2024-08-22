@@ -31,828 +31,780 @@ export interface OrderByLetterType {
 export const orderByLetter: OrderByLetterType = {
   "a": [
     {
-      "label": "阿尔巴尼亚",
-      "value": "al,7"
+      "label": "阿尔巴尼亚  +355",
+      "value": "al,+355,7"
     },
     {
-      "label": "阿尔及利亚",
-      "value": "dz,5"
+      "label": "阿尔及利亚  +213",
+      "value": "dz,+213,5"
     },
     {
-      "label": "阿富汗",
-      "value": "af,5"
+      "label": "阿富汗  +93",
+      "value": "af,+93,5"
     },
     {
-      "label": "阿根廷",
-      "value": "ar,5"
+      "label": "阿根廷  +54",
+      "value": "ar,+54,5"
     },
     {
-      "label": "爱尔兰",
-      "value": "ie,7"
+      "label": "爱尔兰  +353",
+      "value": "ie,+353,7"
     },
     {
-      "label": "埃及",
-      "value": "eg,5"
+      "label": "埃及  +20",
+      "value": "eg,+20,5"
     },
     {
-      "label": "埃塞俄比亚",
-      "value": "et,5"
+      "label": "埃塞俄比亚  +251",
+      "value": "et,+251,5"
     },
     {
-      "label": "爱沙尼亚",
-      "value": "ee,7"
+      "label": "爱沙尼亚  +372",
+      "value": "ee,+372,7"
     },
     {
-      "label": "阿拉伯联合酋长国",
-      "value": "ae,5"
+      "label": "阿拉伯联合酋长国  +971",
+      "value": "ae,+971,5"
     },
     {
-      "label": "阿鲁巴",
-      "value": "aw,5"
+      "label": "阿曼  +968",
+      "value": "om,+968,5"
     },
     {
-      "label": "阿曼",
-      "value": "om,5"
+      "label": "安道尔  +376",
+      "value": "ad,+376,7"
     },
     {
-      "label": "安道尔",
-      "value": "ad,7"
+      "label": "安哥拉  +244",
+      "value": "ao,+244,5"
     },
     {
-      "label": "安哥拉",
-      "value": "ao,5"
+      "label": "澳大利亚  +61",
+      "value": "au,+61,7"
     },
     {
-      "label": "安圭拉",
-      "value": "ai,5"
+      "label": "奥地利  +43",
+      "value": "at,+43,7"
     },
     {
-      "label": "安提瓜和巴布达",
-      "value": "ag,5"
-    },
-    {
-      "label": "澳大利亚",
-      "value": "au,7"
-    },
-    {
-      "label": "奥地利",
-      "value": "at,7"
-    },
-    {
-      "label": "阿塞拜疆",
-      "value": "az,5"
+      "label": "阿塞拜疆  +994",
+      "value": "az,+994,5"
     }
   ],
   "b": [
     {
-      "label": "巴巴多斯",
-      "value": "bb,5"
+      "label": "巴布亚新几内亚  +675",
+      "value": "pg,+675,5"
     },
     {
-      "label": "巴布亚新几内亚",
-      "value": "pg,5"
+      "label": "巴哈马  +1242",
+      "value": "bs,+1242,5"
     },
     {
-      "label": "巴哈马",
-      "value": "bs,5"
+      "label": "白俄罗斯  +375",
+      "value": "by,+375,5"
     },
     {
-      "label": "白俄罗斯",
-      "value": "by,5"
+      "label": "巴基斯坦  +92",
+      "value": "pk,+92,5"
     },
     {
-      "label": "巴基斯坦",
-      "value": "pk,5"
+      "label": "巴拉圭  +595",
+      "value": "py,+595,5"
     },
     {
-      "label": "巴拉圭",
-      "value": "py,5"
+      "label": "巴勒斯坦  +970",
+      "value": "ps,+970,5"
     },
     {
-      "label": "巴勒斯坦",
-      "value": "ps,5"
+      "label": "巴林  +973",
+      "value": "bh,+973,5"
     },
     {
-      "label": "巴林",
-      "value": "bh,5"
+      "label": "巴拿马  +507",
+      "value": "pa,+507,5"
     },
     {
-      "label": "巴拿马",
-      "value": "pa,5"
+      "label": "保加利亚  +359",
+      "value": "bg,+359,7"
     },
     {
-      "label": "保加利亚",
-      "value": "bg,7"
+      "label": "巴西  +55",
+      "value": "br,+55,5"
     },
     {
-      "label": "巴西",
-      "value": "br,5"
+      "label": "北马其顿  +389",
+      "value": "mk,+389,7"
     },
     {
-      "label": "北马其顿",
-      "value": "mk,7"
+      "label": "贝宁  +229",
+      "value": "bj,+229,5"
     },
     {
-      "label": "贝宁",
-      "value": "bj,5"
+      "label": "比利时  +32",
+      "value": "be,+32,7"
     },
     {
-      "label": "比利时",
-      "value": "be,7"
+      "label": "冰岛  +354",
+      "value": "is,+354,7"
     },
     {
-      "label": "冰岛",
-      "value": "is,7"
+      "label": "博茨瓦纳  +267",
+      "value": "bw,+267,5"
     },
     {
-      "label": "博茨瓦纳",
-      "value": "bw,5"
+      "label": "波兰  +48",
+      "value": "pl,+48,7"
     },
     {
-      "label": "波多黎各",
-      "value": "pr,5"
+      "label": "玻利维亚  +591",
+      "value": "bo,+591,5"
     },
     {
-      "label": "波兰",
-      "value": "pl,7"
+      "label": "波斯尼亚和黑塞哥维那  +387",
+      "value": "ba,+387,7"
     },
     {
-      "label": "玻利维亚",
-      "value": "bo,5"
+      "label": "布基纳法索  +226",
+      "value": "bf,+226,5"
     },
     {
-      "label": "伯利兹",
-      "value": "bz,5"
-    },
-    {
-      "label": "波斯尼亚和黑塞哥维那",
-      "value": "ba,7"
-    },
-    {
-      "label": "布基纳法索",
-      "value": "bf,5"
-    },
-    {
-      "label": "布隆迪",
-      "value": "bi,5"
+      "label": "布隆迪  +257",
+      "value": "bi,+257,5"
     }
   ],
   "c": [
     {
-      "label": "赤道几内亚",
-      "value": "gq,5"
+      "label": "赤道几内亚  +240",
+      "value": "gq,+240,5"
     }
   ],
   "d": [
     {
-      "label": "丹麦",
-      "value": "dk,7"
+      "label": "丹麦  +45",
+      "value": "dk,+45,7"
     },
     {
-      "label": "德国",
-      "value": "de,7"
+      "label": "德国  +49",
+      "value": "de,+49,7"
     },
     {
-      "label": "多哥",
-      "value": "tg,5"
+      "label": "多哥  +228",
+      "value": "tg,+228,5"
     },
     {
-      "label": "多米尼加共和国",
-      "value": "do,5"
+      "label": "多米尼加共和国  +1849",
+      "value": "do,+1849,5"
+    },
+    {
+      "label": "多米尼加共和国  +1809",
+      "value": "do,+1809,5"
+    },
+    {
+      "label": "多米尼加共和国  +1829",
+      "value": "do,+1829,5"
     }
   ],
   "e": [
     {
-      "label": "厄瓜多尔",
-      "value": "ec,5"
+      "label": "厄瓜多尔  +593",
+      "value": "ec,+593,5"
     },
     {
-      "label": "厄立特里亚",
-      "value": "er,5"
-    },
-    {
-      "label": "俄罗斯",
-      "value": "ru,8"
+      "label": "俄罗斯  +7",
+      "value": "ru,+7,8"
     }
   ],
   "f": [
     {
-      "label": "法国",
-      "value": "fr,7"
+      "label": "法国  +33",
+      "value": "fr,+33,7"
     },
     {
-      "label": "法罗群岛",
-      "value": "fo,7"
+      "label": "法罗群岛  +298",
+      "value": "fo,+298,7"
     },
     {
-      "label": "梵蒂冈",
-      "value": "va,7"
+      "label": "梵蒂冈  +379",
+      "value": "va,+379,7"
     },
     {
-      "label": "法属波利尼西亚",
-      "value": "pf,5"
+      "label": "法属波利尼西亚  +689",
+      "value": "pf,+689,5"
     },
     {
-      "label": "法属圭亚那",
-      "value": "gf,5"
+      "label": "法属圭亚那  +594",
+      "value": "gf,+594,5"
     },
     {
-      "label": "斐济",
-      "value": "fj,5"
+      "label": "斐济  +679",
+      "value": "fj,+679,5"
     },
     {
-      "label": "菲律宾",
-      "value": "ph,5"
+      "label": "菲律宾  +63",
+      "value": "ph,+63,5"
     },
     {
-      "label": "芬兰",
-      "value": "fi,7"
+      "label": "芬兰  +358",
+      "value": "fi,+358,7"
     },
     {
-      "label": "佛得角",
-      "value": "cv,5"
+      "label": "佛得角  +238",
+      "value": "cv,+238,5"
     }
   ],
   "g": [
     {
-      "label": "冈比亚",
-      "value": "gm,5"
+      "label": "冈比亚  +220",
+      "value": "gm,+220,5"
     },
     {
-      "label": "刚果（布）",
-      "value": "cg,5"
+      "label": "刚果（布）  +242",
+      "value": "cg,+242,5"
     },
     {
-      "label": "刚果（金）",
-      "value": "cd,5"
+      "label": "刚果（金）  +243",
+      "value": "cd,+243,5"
     },
     {
-      "label": "格陵兰岛",
-      "value": "gl,7"
+      "label": "格陵兰岛  +299",
+      "value": "gl,+299,7"
     },
     {
-      "label": "格林纳达",
-      "value": "gd,5"
+      "label": "格鲁吉亚  +995",
+      "value": "ge,+995,5"
     },
     {
-      "label": "格鲁吉亚",
-      "value": "ge,5"
+      "label": "哥伦比亚  +57",
+      "value": "co,+57,5"
     },
     {
-      "label": "哥伦比亚",
-      "value": "co,5"
+      "label": "哥斯达黎加  +506",
+      "value": "cr,+506,5"
     },
     {
-      "label": "哥斯达黎加",
-      "value": "cr,5"
-    },
-    {
-      "label": "瓜德罗普",
-      "value": "gp,5"
-    },
-    {
-      "label": "圭亚那",
-      "value": "gy,5"
+      "label": "瓜德罗普  +590",
+      "value": "gp,+590,5"
     }
   ],
   "h": [
     {
-      "label": "海地",
-      "value": "ht,5"
+      "label": "海地  +509",
+      "value": "ht,+509,5"
     },
     {
-      "label": "韩国",
-      "value": "kr,5"
+      "label": "韩国  +82",
+      "value": "kr,+82,5"
     },
     {
-      "label": "哈萨克斯坦",
-      "value": "kz,5"
+      "label": "哈萨克斯坦  +7",
+      "value": "kz,+7,5"
     },
     {
-      "label": "黑山",
-      "value": "me,7"
+      "label": "黑山  +382",
+      "value": "me,+382,7"
     },
     {
-      "label": "荷兰",
-      "value": "nl,7"
+      "label": "荷兰  +31",
+      "value": "nl,+31,7"
     },
     {
-      "label": "洪都拉斯",
-      "value": "hn,5"
+      "label": "洪都拉斯  +504",
+      "value": "hn,+504,5"
     }
   ],
   "j": [
     {
-      "label": "加纳",
-      "value": "gh,5"
+      "label": "加纳  +233",
+      "value": "gh,+233,5"
     },
     {
-      "label": "加拿大",
-      "value": "ca,7"
+      "label": "加拿大  +1",
+      "value": "ca,+1,7"
     },
     {
-      "label": "柬埔寨",
-      "value": "kh,5"
+      "label": "柬埔寨  +855",
+      "value": "kh,+855,5"
     },
     {
-      "label": "加蓬",
-      "value": "ga,5"
+      "label": "加蓬  +241",
+      "value": "ga,+241,5"
     },
     {
-      "label": "吉布提",
-      "value": "dj,5"
+      "label": "吉布提  +253",
+      "value": "dj,+253,5"
     },
     {
-      "label": "捷克共和国",
-      "value": "cz,7"
+      "label": "捷克共和国  +420",
+      "value": "cz,+420,7"
     },
     {
-      "label": "吉尔吉斯斯坦",
-      "value": "kg,5"
+      "label": "吉尔吉斯斯坦  +996",
+      "value": "kg,+996,5"
     },
     {
-      "label": "津巴布韦",
-      "value": "zw,5"
+      "label": "津巴布韦  +263",
+      "value": "zw,+263,5"
     },
     {
-      "label": "几内亚",
-      "value": "gn,5"
+      "label": "几内亚  +224",
+      "value": "gn,+224,5"
     },
     {
-      "label": "几内亚比绍",
-      "value": "gw,5"
+      "label": "几内亚比绍  +245",
+      "value": "gw,+245,5"
     }
   ],
   "k": [
     {
-      "label": "开曼群岛",
-      "value": "ky,5"
+      "label": "喀麦隆  +237",
+      "value": "cm,+237,5"
     },
     {
-      "label": "喀麦隆",
-      "value": "cm,5"
+      "label": "卡塔尔  +974",
+      "value": "qa,+974,5"
     },
     {
-      "label": "卡塔尔",
-      "value": "qa,5"
+      "label": "克罗地亚  +385",
+      "value": "hr,+385,7"
     },
     {
-      "label": "克罗地亚",
-      "value": "hr,7"
+      "label": "科摩罗  +269",
+      "value": "km,+269,5"
     },
     {
-      "label": "科摩罗",
-      "value": "km,5"
+      "label": "肯尼亚  +254",
+      "value": "ke,+254,5"
     },
     {
-      "label": "肯尼亚",
-      "value": "ke,5"
+      "label": "科特迪瓦  +225",
+      "value": "ci,+225,5"
     },
     {
-      "label": "科特迪瓦",
-      "value": "ci,5"
+      "label": "科威特  +965",
+      "value": "kw,+965,5"
     },
     {
-      "label": "科威特",
-      "value": "kw,5"
-    },
-    {
-      "label": "库克群岛",
-      "value": "ck,5"
+      "label": "库克群岛  +682",
+      "value": "ck,+682,5"
     }
   ],
   "l": [
     {
-      "label": "莱索托",
-      "value": "ls,5"
+      "label": "莱索托  +266",
+      "value": "ls,+266,5"
     },
     {
-      "label": "老挝",
-      "value": "la,5"
+      "label": "老挝  +856",
+      "value": "la,+856,5"
     },
     {
-      "label": "拉脱维亚",
-      "value": "lv,7"
+      "label": "拉脱维亚  +371",
+      "value": "lv,+371,7"
     },
     {
-      "label": "黎巴嫩",
-      "value": "lb,5"
+      "label": "黎巴嫩  +961",
+      "value": "lb,+961,5"
     },
     {
-      "label": "利比里亚",
-      "value": "lr,5"
+      "label": "利比里亚  +231",
+      "value": "lr,+231,5"
     },
     {
-      "label": "利比亚",
-      "value": "ly,5"
+      "label": "利比亚  +218",
+      "value": "ly,+218,5"
     },
     {
-      "label": "列支敦士登",
-      "value": "li,7"
+      "label": "列支敦士登  +423",
+      "value": "li,+423,7"
     },
     {
-      "label": "立陶宛",
-      "value": "lt,7"
+      "label": "立陶宛  +370",
+      "value": "lt,+370,7"
     },
     {
-      "label": "留尼汪",
-      "value": "re,5"
+      "label": "留尼汪  +262",
+      "value": "re,+262,5"
     },
     {
-      "label": "罗马尼亚",
-      "value": "ro,7"
+      "label": "罗马尼亚  +40",
+      "value": "ro,+40,7"
     },
     {
-      "label": "卢森堡",
-      "value": "lu,7"
+      "label": "卢森堡  +352",
+      "value": "lu,+352,7"
     },
     {
-      "label": "卢旺达",
-      "value": "rw,5"
+      "label": "卢旺达  +250",
+      "value": "rw,+250,5"
     }
   ],
   "m": [
     {
-      "label": "马达加斯加",
-      "value": "mg,5"
+      "label": "马达加斯加  +261",
+      "value": "mg,+261,5"
     },
     {
-      "label": "马尔代夫",
-      "value": "mv,5"
+      "label": "马尔代夫  +960",
+      "value": "mv,+960,5"
     },
     {
-      "label": "马耳他",
-      "value": "mt,7"
+      "label": "马耳他  +356",
+      "value": "mt,+356,7"
     },
     {
-      "label": "马来西亚",
-      "value": "my,5"
+      "label": "马来西亚  +60",
+      "value": "my,+60,5"
     },
     {
-      "label": "马拉维",
-      "value": "mw,5"
+      "label": "马拉维  +265",
+      "value": "mw,+265,5"
     },
     {
-      "label": "马里",
-      "value": "ml,5"
+      "label": "马里  +223",
+      "value": "ml,+223,5"
     },
     {
-      "label": "毛里求斯",
-      "value": "mu,5"
+      "label": "毛里求斯  +230",
+      "value": "mu,+230,5"
     },
     {
-      "label": "毛里塔尼亚",
-      "value": "mr,5"
+      "label": "毛里塔尼亚  +222",
+      "value": "mr,+222,5"
     },
     {
-      "label": "马提尼克岛",
-      "value": "mq,5"
+      "label": "马提尼克岛  +596",
+      "value": "mq,+596,5"
     },
     {
-      "label": "马约特",
-      "value": "yt,5"
+      "label": "马约特  +269",
+      "value": "yt,+269,5"
     },
     {
-      "label": "美国",
-      "value": "us,7"
+      "label": "美国  +1",
+      "value": "us,+1,7"
     },
     {
-      "label": "蒙古",
-      "value": "mn,5"
+      "label": "蒙古  +976",
+      "value": "mn,+976,5"
     },
     {
-      "label": "孟加拉",
-      "value": "bd,5"
+      "label": "孟加拉  +880",
+      "value": "bd,+880,5"
     },
     {
-      "label": "蒙特塞拉特岛",
-      "value": "ms,5"
+      "label": "缅甸  +95",
+      "value": "mm,+95,5"
     },
     {
-      "label": "缅甸",
-      "value": "mm,5"
+      "label": "秘鲁  +51",
+      "value": "pe,+51,5"
     },
     {
-      "label": "秘鲁",
-      "value": "pe,5"
+      "label": "摩尔多瓦  +373",
+      "value": "md,+373,7"
     },
     {
-      "label": "摩尔多瓦",
-      "value": "md,7"
+      "label": "摩洛哥  +212",
+      "value": "ma,+212,5"
     },
     {
-      "label": "摩洛哥",
-      "value": "ma,5"
+      "label": "摩纳哥  +377",
+      "value": "mc,+377,7"
     },
     {
-      "label": "摩纳哥",
-      "value": "mc,7"
+      "label": "莫桑比克  +258",
+      "value": "mz,+258,5"
     },
     {
-      "label": "莫桑比克",
-      "value": "mz,5"
-    },
-    {
-      "label": "墨西哥",
-      "value": "mx,5"
+      "label": "墨西哥  +52",
+      "value": "mx,+52,5"
     }
   ],
   "n": [
     {
-      "label": "纳米比亚",
-      "value": "na,5"
+      "label": "纳米比亚  +264",
+      "value": "na,+264,5"
     },
     {
-      "label": "南非",
-      "value": "za,5"
+      "label": "南非  +27",
+      "value": "za,+27,5"
     },
     {
-      "label": "瑙鲁",
-      "value": "nr,5"
+      "label": "瑙鲁  +674",
+      "value": "nr,+674,5"
     },
     {
-      "label": "尼泊尔",
-      "value": "np,5"
+      "label": "尼泊尔  +977",
+      "value": "np,+977,5"
     },
     {
-      "label": "尼加拉瓜",
-      "value": "ni,5"
+      "label": "尼加拉瓜  +505",
+      "value": "ni,+505,5"
     },
     {
-      "label": "尼日尔",
-      "value": "ne,5"
+      "label": "尼日尔  +227",
+      "value": "ne,+227,5"
     },
     {
-      "label": "尼日利亚",
-      "value": "ng,5"
+      "label": "尼日利亚  +234",
+      "value": "ng,+234,5"
     },
     {
-      "label": "挪威",
-      "value": "no,7"
+      "label": "挪威  +47",
+      "value": "no,+47,7"
     }
   ],
   "p": [
     {
-      "label": "葡萄牙",
-      "value": "pt,7"
+      "label": "葡萄牙  +351",
+      "value": "pt,+351,7"
     }
   ],
   "r": [
     {
-      "label": "日本",
-      "value": "jp,5"
+      "label": "日本  +81",
+      "value": "jp,+81,5"
     },
     {
-      "label": "瑞典",
-      "value": "se,7"
+      "label": "瑞典  +46",
+      "value": "se,+46,7"
     },
     {
-      "label": "瑞士",
-      "value": "ch,7"
+      "label": "瑞士  +41",
+      "value": "ch,+41,7"
     }
   ],
   "s": [
     {
-      "label": "萨尔瓦多",
-      "value": "sv,5"
+      "label": "萨尔瓦多  +503",
+      "value": "sv,+503,5"
     },
     {
-      "label": "塞尔维亚",
-      "value": "rs,7"
+      "label": "塞尔维亚  +381",
+      "value": "rs,+381,7"
     },
     {
-      "label": "塞拉利昂",
-      "value": "sl,5"
+      "label": "塞拉利昂  +232",
+      "value": "sl,+232,5"
     },
     {
-      "label": "塞内加尔",
-      "value": "sn,5"
+      "label": "塞内加尔  +221",
+      "value": "sn,+221,5"
     },
     {
-      "label": "塞浦路斯",
-      "value": "cy,7"
+      "label": "塞浦路斯  +357",
+      "value": "cy,+357,7"
     },
     {
-      "label": "塞舌尔",
-      "value": "sc,5"
+      "label": "塞舌尔  +248",
+      "value": "sc,+248,5"
     },
     {
-      "label": "沙特阿拉伯",
-      "value": "sa,5"
+      "label": "沙特阿拉伯  +966",
+      "value": "sa,+966,5"
     },
     {
-      "label": "圣多美和普林西比",
-      "value": "st,5"
+      "label": "圣马力诺  +378",
+      "value": "sm,+378,7"
     },
     {
-      "label": "圣卢西亚",
-      "value": "lc,5"
+      "label": "斯里兰卡  +94",
+      "value": "lk,+94,5"
     },
     {
-      "label": "圣马力诺",
-      "value": "sm,7"
+      "label": "斯洛伐克  +421",
+      "value": "sk,+421,7"
     },
     {
-      "label": "斯里兰卡",
-      "value": "lk,5"
+      "label": "斯洛文尼亚  +386",
+      "value": "si,+386,7"
     },
     {
-      "label": "斯洛伐克",
-      "value": "sk,7"
+      "label": "斯威士兰  +268",
+      "value": "sz,+268,5"
     },
     {
-      "label": "斯洛文尼亚",
-      "value": "si,7"
+      "label": "苏里南  +597",
+      "value": "sr,+597,5"
     },
     {
-      "label": "斯威士兰",
-      "value": "sz,5"
+      "label": "所罗门群岛  +677",
+      "value": "sb,+677,5"
     },
     {
-      "label": "苏里南",
-      "value": "sr,5"
-    },
-    {
-      "label": "所罗门群岛",
-      "value": "sb,5"
-    },
-    {
-      "label": "索马里",
-      "value": "so,5"
+      "label": "索马里  +252",
+      "value": "so,+252,5"
     }
   ],
   "t": [
     {
-      "label": "泰国",
-      "value": "th,5"
+      "label": "泰国  +66",
+      "value": "th,+66,5"
     },
     {
-      "label": "塔吉克斯坦",
-      "value": "tj,5"
+      "label": "塔吉克斯坦  +992",
+      "value": "tj,+992,5"
     },
     {
-      "label": "汤加",
-      "value": "to,5"
+      "label": "汤加  +676",
+      "value": "to,+676,5"
     },
     {
-      "label": "坦桑尼亚",
-      "value": "tz,5"
+      "label": "坦桑尼亚  +255",
+      "value": "tz,+255,5"
     },
     {
-      "label": "特立尼达和多巴哥",
-      "value": "tt,5"
+      "label": "特立尼达和多巴哥  +1868",
+      "value": "tt,+1868,5"
     },
     {
-      "label": "土耳其",
-      "value": "tr,7"
+      "label": "土耳其  +90",
+      "value": "tr,+90,7"
     },
     {
-      "label": "土库曼斯坦",
-      "value": "tm,5"
+      "label": "土库曼斯坦  +993",
+      "value": "tm,+993,5"
     },
     {
-      "label": "突尼斯",
-      "value": "tn,5"
+      "label": "突尼斯  +216",
+      "value": "tn,+216,5"
     }
   ],
   "w": [
     {
-      "label": "危地马拉",
-      "value": "gt,5"
+      "label": "危地马拉  +502",
+      "value": "gt,+502,5"
     },
     {
-      "label": "委内瑞拉",
-      "value": "ve,5"
+      "label": "委内瑞拉  +58",
+      "value": "ve,+58,5"
     },
     {
-      "label": "文莱",
-      "value": "bn,5"
+      "label": "文莱  +673",
+      "value": "bn,+673,5"
     },
     {
-      "label": "乌干达",
-      "value": "ug,5"
+      "label": "乌干达  +256",
+      "value": "ug,+256,5"
     },
     {
-      "label": "乌克兰",
-      "value": "ua,7"
+      "label": "乌克兰  +380",
+      "value": "ua,+380,7"
     },
     {
-      "label": "乌拉圭",
-      "value": "uy,5"
+      "label": "乌拉圭  +598",
+      "value": "uy,+598,5"
     },
     {
-      "label": "乌兹别克斯坦",
-      "value": "uz,5"
+      "label": "乌兹别克斯坦  +998",
+      "value": "uz,+998,5"
     }
   ],
   "x": [
     {
-      "label": "西班牙",
-      "value": "es,7"
+      "label": "西班牙  +34",
+      "value": "es,+34,7"
     },
     {
-      "label": "希腊",
-      "value": "gr,7"
+      "label": "希腊  +30",
+      "value": "gr,+30,7"
     },
     {
-      "label": "新加坡",
-      "value": "sg,5"
+      "label": "新加坡  +65",
+      "value": "sg,+65,5"
     },
     {
-      "label": "新西兰",
-      "value": "nz,7"
+      "label": "新西兰  +64",
+      "value": "nz,+64,7"
     },
     {
-      "label": "匈牙利",
-      "value": "hu,7"
+      "label": "匈牙利  +36",
+      "value": "hu,+36,7"
     }
   ],
   "y": [
     {
-      "label": "牙买加",
-      "value": "jm,5"
+      "label": "牙买加  +1876",
+      "value": "jm,+1876,5"
     },
     {
-      "label": "亚美尼亚",
-      "value": "am,5"
+      "label": "亚美尼亚  +374",
+      "value": "am,+374,5"
     },
     {
-      "label": "也门",
-      "value": "ye,5"
+      "label": "也门  +967",
+      "value": "ye,+967,5"
     },
     {
-      "label": "意大利",
-      "value": "it,7"
+      "label": "意大利  +39",
+      "value": "it,+39,7"
     },
     {
-      "label": "伊拉克",
-      "value": "iq,5"
+      "label": "伊拉克  +964",
+      "value": "iq,+964,5"
     },
     {
-      "label": "印度",
-      "value": "in,5"
+      "label": "印度  +91",
+      "value": "in,+91,5"
     },
     {
-      "label": "印度尼西亚",
-      "value": "id,5"
+      "label": "印度尼西亚  +62",
+      "value": "id,+62,5"
     },
     {
-      "label": "英国",
-      "value": "gb,7"
+      "label": "英国  +44",
+      "value": "gb,+44,7"
     },
     {
-      "label": "英属维尔京群岛",
-      "value": "vg,5"
+      "label": "以色列  +972",
+      "value": "il,+972,7"
     },
     {
-      "label": "以色列",
-      "value": "il,7"
+      "label": "约旦  +962",
+      "value": "jo,+962,5"
     },
     {
-      "label": "约旦",
-      "value": "jo,5"
-    },
-    {
-      "label": "越南",
-      "value": "vn,5"
+      "label": "越南  +84",
+      "value": "vn,+84,5"
     }
   ],
   "z": [
     {
-      "label": "赞比亚",
-      "value": "zm,5"
+      "label": "赞比亚  +260",
+      "value": "zm,+260,5"
     },
     {
-      "label": "乍得",
-      "value": "td,5"
+      "label": "乍得  +235",
+      "value": "td,+235,5"
     },
     {
-      "label": "直布罗陀",
-      "value": "gi,7"
+      "label": "直布罗陀  +350",
+      "value": "gi,+350,7"
     },
     {
-      "label": "智利",
-      "value": "cl,5"
+      "label": "智利  +56",
+      "value": "cl,+56,5"
     },
     {
-      "label": "中非共和国",
-      "value": "cf,5"
+      "label": "中非共和国  +236",
+      "value": "cf,+236,5"
     },
     {
-      "label": "中国",
-      "value": "cn,1"
+      "label": "中国  +86",
+      "value": "cn,+86,1"
     },
     {
-      "label": "中国澳门",
-      "value": "mo,5"
+      "label": "中国澳门  +853",
+      "value": "mo,+853,5"
     },
     {
-      "label": "中国台湾",
-      "value": "tw,5"
+      "label": "中国台湾  +886",
+      "value": "tw,+886,5"
     },
     {
-      "label": "中国香港",
-      "value": "hk,5"
+      "label": "中国香港  +852",
+      "value": "hk,+852,5"
     }
   ]
 }
