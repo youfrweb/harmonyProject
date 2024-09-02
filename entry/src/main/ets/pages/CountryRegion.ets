@@ -82,7 +82,7 @@ struct CountryRegion {
                   .backgroundColor(0xFFFFFF)
               }
               .onClick(() => {
-                router.replaceUrl({
+                router.back({
                   url: 'pages/Login',
                   params: {
                     label: order.label

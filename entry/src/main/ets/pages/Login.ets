@@ -12,7 +12,7 @@ struct Login {
   @State addressLabel: string = '中国 +86'
   title: string = '华为帐号'
 
-  aboutToAppear(): void {
+  onPageShow(): void {
     if(router.getParams() !== undefined){
       this.addressLabel = (router.getParams() as ParamsType).label
     }
@@ -93,7 +93,8 @@ struct Login {
           .type(InputType.Number)
         TextInput({
           placeholder: '密码'
-        }).type(InputType.Password)
+        })
+          .type(InputType.Password)
           .margin({ top: 20, bottom: 30 })
         Row() {
           Text('短信验证码登录')

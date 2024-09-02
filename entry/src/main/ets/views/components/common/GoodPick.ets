@@ -32,7 +32,6 @@ struct GoodPick {
               Text('￥4599')
                 .fontSize(14)
                 .fontWeight(600)
-
             }
             .alignItems(HorizontalAlign.Start)
           }
