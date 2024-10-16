@@ -3,6 +3,14 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "gray_font",
+      "value": "#666"
+    },
+    {
+      "name": "main_bg",
+      "value": "#f1f3f5"
     }
   ]
 }

@@ -1,6 +1,5 @@
 import GoodPick from './components/common/GoodPick'
 import { router } from '@kit.ArkUI'
-import CommonCss from '../style/commonCss'
 
 @Component
 struct UserCenter {
@@ -234,7 +233,7 @@ struct UserCenter {
       GoodPick()
         .margin({left: 15, right: 15})
     }
-    .backgroundColor(CommonCss.BG_COLOR)
+    .backgroundColor($r('app.color.main_bg'))
   }
 }
 export default UserCenter

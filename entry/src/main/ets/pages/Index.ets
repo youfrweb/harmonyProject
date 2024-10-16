@@ -6,7 +6,6 @@ import UserCenter from '../views/UserCenter'
 
 import { AxiosError, AxiosResponse } from '@ohos/axios';
 import IndexApi from '../api/home';
-import CommonCss from '../style/commonCss'
 
 interface MenuItemType {
   icon: string,
@@ -74,7 +73,7 @@ struct Index {
         })
       }
       .animationDuration(0)
-      .barBackgroundColor(CommonCss.BG_COLOR)
+      .barBackgroundColor($r('app.color.main_bg'))
       .onChange((index: number) => {
         this.currentIndex = index
       })
