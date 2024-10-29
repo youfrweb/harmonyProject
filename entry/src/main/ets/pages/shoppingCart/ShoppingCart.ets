@@ -1,4 +1,4 @@
-import GoodPick from './components/common/GoodPick'
+import GoodPick from '../../components/common/GoodPick'
 
 @Component
 struct ShoppingCart {
@@ -9,7 +9,7 @@ struct ShoppingCart {
         .fontSize(20)
         .fontWeight(600)
       Scroll() {
-        Column(){
+        Column() {
           Column() {
             Image($r('app.media.convemptyCart'))
               .width(100)

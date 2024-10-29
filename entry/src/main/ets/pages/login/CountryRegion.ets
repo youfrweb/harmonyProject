@@ -1,5 +1,6 @@
-import { CountryData, orderByLetter } from '../viewModal/orderByLetterData';
+import { CountryData, orderByLetter } from '../../viewModal/orderByLetterData';
 import { router } from '@kit.ArkUI';
+import Navigate from '../../components/common/Navigate';
 
 @Entry
 @Component
@@ -19,13 +20,17 @@ struct CountryRegion {
   build() {
     Column() {
       // 导航
-      Row(){
-        Image($r('app.media.ic_public_back'))
-          .width(26)
-          .margin({left: 20})
-          .onClick(() => {
-            router.back()
-          })
+      // Row() {
+      //   Image($r('app.media.ic_public_back'))
+      //     .width(26)
+      //     .margin({ left: 20 })
+      //     .onClick(() => {
+      //       router.back()
+      //     })
+      //
+      // }
+
+      Navigate() {
         Text('国家/地区')
           .fontSize(22)
           .width('100%')
@@ -52,7 +57,7 @@ struct CountryRegion {
       Text('已支持短信验证码登录的国家/地区')
         .width('100%')
         .fontColor('#666')
-        .padding({left: 15})
+        .padding({ left: 15 })
 
       // Row(){
       //   Text('已开通')
@@ -99,10 +104,10 @@ struct CountryRegion {
       .onScrollIndex((start: number, end: number, center: number) => {
         this.currentTab = start
       })
-      .margin({top: 10})
+      .margin({ top: 10 })
 
       // 浮动导航
-      Column(){
+      Column() {
         ForEach(Object.keys(orderByLetter), (item: string, index: number) => {
           Text(item.toUpperCase())
             .fontSize(14)

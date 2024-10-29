@@ -13,7 +13,7 @@ struct Login {
   title: string = '华为帐号'
 
   onPageShow(): void {
-    if(router.getParams() !== undefined){
+    if (router.getParams() !== undefined) {
       this.addressLabel = (router.getParams() as ParamsType).label
     }
   }
@@ -46,7 +46,7 @@ struct Login {
           }
           .onClick(() => {
             router.pushUrl({
-              url: 'pages/CountryRegion',
+              url: 'pages/login/CountryRegion',
             })
           })
         }
@@ -68,7 +68,8 @@ struct Login {
             .type(InputType.Number)
           Button('获取验证码')
             .buttonStyle(ButtonStyleMode.NORMAL)
-            .onClick(() => { })
+            .onClick(() => {
+            })
         }
         .margin({ top: 20, bottom: 30 })
         .width('100%')

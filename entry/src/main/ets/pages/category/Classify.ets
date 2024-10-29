@@ -1,4 +1,5 @@
-import ClassifyList from './components/classify/ClassifyList'
+import ClassifyList from './classify/ClassifyList'
+import { router } from '@kit.ArkUI'
 
 @Component
 struct Classify {
@@ -12,6 +13,11 @@ struct Classify {
           Text('请输入')
             .fontSize(16)
             .fontColor('#5c5c5d')
+            .onClick(() => {
+              router.pushUrl({
+                url: 'pages/search/SearchPage'
+              })
+            })
         }
         .backgroundColor('#fff')
         .borderRadius(20)
@@ -28,7 +34,7 @@ struct Classify {
         right: 10
       })
 
-    // 列表部分
+      // 列表部分
       ClassifyList()
         .layoutWeight(1)
     }

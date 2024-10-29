@@ -1,7 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "pages/CountryRegion",
-    "pages/Login"
+    "pages/login/CountryRegion",
+    "pages/login/Login",
+    "pages/search/SearchPage"
   ]
 }

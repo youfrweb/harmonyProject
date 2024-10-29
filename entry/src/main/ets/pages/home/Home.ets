@@ -1,10 +1,10 @@
-import HomeBanner from './components/home/HomeBanner';
-import HomeClassify from './components/home/HomeClassify';
-import HomeRecommend from './components/home/HomeRecommend';
-import HomeSubarea from './components/home/HomeSubarea';
-import HomeTab from './components/home/HomeTab';
-import HomeWelfare from './components/home/HomeWelfare';
-import HomeHeader from './components/home/HomeHeader';
+import HomeBanner from './main/HomeBanner';
+import HomeClassify from './main/HomeClassify';
+import HomeRecommend from './main/HomeRecommend';
+import HomeSubarea from './main/HomeSubarea';
+import HomeTab from './main/HomeTab';
+import HomeWelfare from './main/HomeWelfare';
+import HomeHeader from './main/HomeHeader';
 
 @Component
 struct Home {
@@ -14,11 +14,9 @@ struct Home {
   @State isShowGoTopButton: boolean = false
 
   aboutToAppear(): void {
-    // this.scroller.scrollTo({ xOffset: 0, yOffset: 100 })
-  }
+    console.log('home aboutToAppear')
 
-  onPageShow(): void {
-    // this.scroller.scrollTo({ xOffset: 0, yOffset: 800 })
+    // this.scroller.scrollTo({ xOffset: 0, yOffset: 100 })
   }
 
   build() {
@@ -56,10 +54,10 @@ struct Home {
       .layoutWeight(1)
       .onWillScroll(() => {
         const scrollYOffset = this.scroller.currentOffset().yOffset
-          this.isShowGoTopButton = scrollYOffset > 500 ? true : false
+        this.isShowGoTopButton = scrollYOffset > 500 ? true : false
       })
 
-      if(this.isShowGoTopButton) Button({ type: ButtonType.Circle, stateEffect: true }) {
+      if (this.isShowGoTopButton) Button({ type: ButtonType.Circle, stateEffect: true }) {
         Image($r('app.media.ic_public_backtotop'))
           .width(20)
           .fillColor('#666')

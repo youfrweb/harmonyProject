@@ -1,8 +1,8 @@
-import Activity from '../views/Activity'
-import Classify from '../views/Classify'
-import Home from '../views/Home'
-import ShoppingCart from '../views/ShoppingCart'
-import UserCenter from '../views/UserCenter'
+import Activity from './activity/Activity'
+import Classify from './category/Classify'
+import Home from './home/Home'
+import ShoppingCart from './shoppingCart/ShoppingCart'
+import UserCenter from './userCenter/UserCenter'
 
 import { AxiosError, AxiosResponse } from '@ohos/axios';
 import IndexApi from '../api/home';
@@ -27,8 +27,8 @@ struct Index {
   aboutToAppear(): void {
     // 请求案例
     IndexApi.getList().then((res: AxiosResponse) => {
-      console.log('list数据', res)
-    }).catch((err: AxiosError)=>{
+      console.log('list数据', JSON.stringify(res))
+    }).catch((err: AxiosError) => {
       console.log('err', err)
     })
   }

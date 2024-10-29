@@ -11,6 +11,10 @@
     {
       "name": "main_bg",
       "value": "#f1f3f5"
+    },
+    {
+      "name": "main_color",
+      "value": "#ca141d"
     }
   ]
 }

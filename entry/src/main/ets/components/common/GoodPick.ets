@@ -17,13 +17,13 @@ struct GoodPick {
           Column() {
             Image($r('app.media.classify01'))
               .width(120)
-            Column(){
+            Column() {
               Text('Mate 60 Pro')
                 .fontSize(14)
               Text('6.88mm轻薄可靠|鸿蒙AI趣玩|后置5000万悬停自拍')
                 .fontSize(12)
                 .fontColor('#666')
-                .margin({top: 6, bottom:6})
+                .margin({ top: 6, bottom: 6 })
                 .textOverflow({
                   overflow: TextOverflow.Ellipsis
                 })

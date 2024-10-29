@@ -1,4 +1,4 @@
-import NewProduct from './components/activity/NewProduct'
+import NewProduct from './product/NewProduct'
 
 interface TabType {
   title: string
