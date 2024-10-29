@@ -13,6 +13,7 @@
 7. 国家地区选择菜单（带导航）
 8. 接口请求
 9. 页面跳转
+10. 搜索页面
 
 **效果图**
 
@@ -24,4 +25,5 @@
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage06.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage07.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage08.png)
+![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage09.png)
 
