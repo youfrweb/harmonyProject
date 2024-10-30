@@ -2,30 +2,48 @@ import Navigate from '../../components/common/Navigate'
 import { router } from '@kit.ArkUI'
 import IndexApi from '../../api/home'
 import SearchTop from './tip/SearchTop'
+import { RECENT_SEARCH_LIST, SEARCH_TIP } from '../../utils/constant'
 
 interface RouterParams {
-  findTip: string
+  searchTip?: string
 }
 
 @Entry
 @Component
 struct SearchPage {
-  @State routerParams: RouterParams = {
-    findTip: ''
-  }
   @State searchValue: string = ''
   @State tipList: string[] = []
-  @State recentSearchList: string[] = []
+  @StorageLink(RECENT_SEARCH_LIST) recentSearchList: string[] = []
+  @StorageLink(SEARCH_TIP) searchTip: string = ''
+  @State routerParams: RouterParams = {}
 
   async aboutToAppear(): Promise<void> {
+    this.tipList = await IndexApi.getTipList()
+  }
+
+  onPageShow(): void {
+    this.searchValue = ''
     const params = router.getParams() as RouterParams
     if (params) {
       this.routerParams = params
+      this.searchValue = this.routerParams?.searchTip || ''
     }
+  }
 
-    this.tipList = await IndexApi.getTipList()
-    // 获取本地最新搜索记录
-    // this.recentSearchList =
+  @Builder
+  searchTipButtonBuilder(item: string) {
+    Button(item)
+      .backgroundColor('#ffe3e3e3')
+      .controlSize(ControlSize.SMALL)
+      .fontColor($r('app.color.gray_font'))
+      .margin({ right: 10, top: 10 })
+      .onClick(() => {
+        // 快捷点击搜索点击处理
+        router.pushUrl({
+          url: 'pages/search/SearchShowPage',
+          params: { searchTip: item }
+        })
+      })
   }
 
   build() {
@@ -34,7 +52,7 @@ struct SearchPage {
       Navigate() {
         Search({
           value: this.searchValue,
-          placeholder: this.routerParams?.findTip || '请输入'
+          placeholder: this.searchTip || '请输入'
         })
           .backgroundColor('#fff')
           .layoutWeight(1)
@@ -50,10 +68,16 @@ struct SearchPage {
           .fontWeight(600)
           .fontColor(Color.Black)
           .onClick(() => {
-            // console.log('this.routerParams', this.searchValue, JSON.stringify(this.routerParams))
-            console.log('this.routerParams', this.searchValue)
-            const value: string = this.searchValue || this.routerParams.findTip
-            this.recentSearchList.push(value)
+            const value: string = this.searchValue || this.searchTip
+            router.pushUrl({
+              url: 'pages/search/SearchShowPage',
+              params: { searchTip: value }
+            })
+            const index = this.recentSearchList.findIndex(item => item === value)
+            if (index !== -1) {
+              this.recentSearchList.splice(index, 1)
+            }
+            this.recentSearchList.unshift(value)
           })
       }
 
@@ -67,16 +91,15 @@ struct SearchPage {
               Blank()
               Image($r('app.media.delete'))
                 .width(22)
+                .onClick(() => {
+                  this.recentSearchList = []
+                })
             }
             .width('100%')
 
-
             Flex({ wrap: FlexWrap.Wrap }) {
               ForEach(this.recentSearchList, (item: string) => {
-                Button(item)
-                  .backgroundColor('#ffe3e3e3')
-                  .controlSize(ControlSize.SMALL)
-                  .fontColor($r('app.color.gray_font'))
+                this.searchTipButtonBuilder(item)
               })
             }.width('100%')
             .margin({
@@ -96,11 +119,7 @@ struct SearchPage {
 
             Flex({ wrap: FlexWrap.Wrap }) {
               ForEach(this.tipList, (item: string) => {
-                Button(item)
-                  .backgroundColor('#ffe3e3e3')
-                  .controlSize(ControlSize.SMALL)
-                  .fontColor($r('app.color.gray_font'))
-                  .margin({ right: 10, top: 10 })
+                this.searchTipButtonBuilder(item)
               })
             }
             .width('100%')

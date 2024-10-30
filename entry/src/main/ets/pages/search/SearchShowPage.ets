@@ -6,7 +6,7 @@ import Drawer from '../../components/common/Drawer'
 import SearchFilter from './filter/SearchFilter'
 
 interface RouterParams {
-  findTip?: string
+  searchTip: string
 }
 
 interface filterListType {
@@ -18,9 +18,8 @@ interface filterListType {
 @Entry
 @Component
 struct SearchPage {
-  @State routerParams: RouterParams = {}
   @State changeValue: string = ''
-  @State tipList: string[] = []
+  // @State tipList: string[] = []
   @State bgColors: string[] = ['#f00', '#666', '#888']
   private filterList: filterListType[] = [
     { title: '综合', key: '1', type: 'common' },
@@ -32,6 +31,9 @@ struct SearchPage {
   @State currentFilterCount: number = 0
   @State isUpAndDown: boolean = false
   @State drawerShow: boolean = false
+  @State routerParams: RouterParams = {
+    searchTip: '',
+  }
 
   async aboutToAppear(): Promise<void> {
     const params = router.getParams() as RouterParams
@@ -39,7 +41,7 @@ struct SearchPage {
       this.routerParams = params
     }
 
-    this.tipList = await IndexApi.getTipList()
+    // this.tipList = await IndexApi.getTipList()
   }
 
   build() {
@@ -64,7 +66,7 @@ struct SearchPage {
 
           Chip({
             label: {
-              text: "操作块",
+              text: this.routerParams.searchTip,
               fontSize: 12,
               fontColor: Color.Black,
               activatedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'),
@@ -79,10 +81,15 @@ struct SearchPage {
             activatedBackgroundColor: $r('sys.color.ohos_id_color_emphasize'),
             // borderRadius: $r('sys.float.ohos_id_corner_radius_button'),
             onClose: () => {
-              console.log("chip on close")
+              router.back()
             },
             onClicked: () => {
-              console.log("chip on clicked")
+              // router.back()
+              
+              router.back({
+                url: 'pages/search/SearchPage',
+                params: { searchTip: this.routerParams.searchTip }
+              })
             }
           })
         }
@@ -156,7 +163,7 @@ struct SearchPage {
           // },
           direction: GridRowDirection.Row
         }) {
-          ForEach(this.bgColors, (color: Color) => {
+          ForEach(['1', '2', '3'], (color: Color) => {
             GridCol({
               span: 1,
               offset: 0,

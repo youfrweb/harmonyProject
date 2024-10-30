@@ -1,5 +1,6 @@
 import { router } from '@kit.ArkUI'
 import IndexApi from '../../../api/home';
+import { SEARCH_TIP } from '../../../utils/constant';
 
 @Component
 struct HomeHeader {
@@ -58,9 +59,9 @@ struct HomeHeader {
       .layoutWeight(1)
       .padding(10)
       .onClick(() => {
+        AppStorage.setOrCreate(SEARCH_TIP, this.tipList[this.findTipsCount])
         router.pushUrl({
-          url: 'pages/search/SearchPage',
-          params: { findTip: this.tipList[this.findTipsCount] }
+          url: 'pages/search/SearchPage'
         })
       })
 
