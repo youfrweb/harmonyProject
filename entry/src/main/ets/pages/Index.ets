@@ -6,6 +6,7 @@ import UserCenter from './userCenter/UserCenter'
 
 import { AxiosError, AxiosResponse } from '@ohos/axios';
 import IndexApi from '../api/home';
+import { font } from '@kit.ArkUI'
 
 interface MenuItemType {
   icon: string,
@@ -25,6 +26,12 @@ struct Index {
   ]
 
   aboutToAppear(): void {
+    // 页面加载就注册iconfont
+    font.registerFont({
+      familyName: 'sysFont',
+      familySrc: '/utils/font/iconfont.ttf'
+    })
+
     // 请求案例
     IndexApi.getList().then((res: AxiosResponse) => {
       console.log('list数据', JSON.stringify(res))

@@ -18,9 +18,6 @@ interface filterListType {
 @Entry
 @Component
 struct SearchPage {
-  @State changeValue: string = ''
-  // @State tipList: string[] = []
-  @State bgColors: string[] = ['#f00', '#666', '#888']
   private filterList: filterListType[] = [
     { title: '综合', key: '1', type: 'common' },
     { title: '最新', key: '2', type: 'common' },
@@ -28,37 +25,27 @@ struct SearchPage {
     { title: '价格', key: '4', type: 'upAndDown' },
     { title: '筛选', key: '5', type: 'common' },
   ]
+  @State changeValue: string = ''
+  @State bgColors: string[] = ['#f00', '#666', '#888']
   @State currentFilterCount: number = 0
   @State isUpAndDown: boolean = false
   @State drawerShow: boolean = false
   @State routerParams: RouterParams = {
     searchTip: '',
   }
+  @State isBoxStyle: boolean = true
 
   async aboutToAppear(): Promise<void> {
     const params = router.getParams() as RouterParams
     if (params) {
       this.routerParams = params
     }
-
-    // this.tipList = await IndexApi.getTipList()
   }
 
   build() {
     Column() {
       // top导航/搜索模块
       Navigate() {
-        // Search({
-        //   value: this.changeValue,
-        //   placeholder: this.routerParams?.findTip || '请输入'
-        // })
-        //   .backgroundColor('#fff')
-        //   .layoutWeight(1)
-        //   .margin({
-        //     left: 15,
-        //     right: 15
-        //   })
-
         Row() {
           Image($r('app.media.ic_public_search'))
             .width(22)
@@ -84,8 +71,6 @@ struct SearchPage {
               router.back()
             },
             onClicked: () => {
-              // router.back()
-              
               router.back({
                 url: 'pages/search/SearchPage',
                 params: { searchTip: this.routerParams.searchTip }
@@ -96,29 +81,22 @@ struct SearchPage {
         .backgroundColor('#fff')
         .borderRadius(25)
         .layoutWeight(1)
-        .padding(10)
-        .onClick(() => {
-          // router.pushUrl({
-          //   url: 'pages/SearchPage',
-          //   params: { findTip: this.tipList[this.findTipsCount] }
-          // })
-        })
+        .padding(8)
         .margin({
           left: 15,
           right: 15
         })
 
-        Text('搜索')
-          .fontWeight(600)
-          .fontColor(Color.Black)
+        Text(this.isBoxStyle ? '\ue678' : '\ue677')
+          .fontFamily('sysFont')
+          .fontSize(26)
           .onClick(() => {
-
+            this.isBoxStyle = !this.isBoxStyle
           })
       }
 
       // 查询结果
       Column() {
-
         // 筛选
         Row() {
           ForEach(this.filterList, (item: filterListType, index: number) => {
@@ -152,55 +130,55 @@ struct SearchPage {
           bottom: 20
         })
 
-
         // 商品列表
-        GridRow({
-          columns: 2,
-          gutter: { x: 5, y: 10 },
-          // breakpoints: {
-          //   value: ["400vp", "600vp", "800vp"],
-          //   reference: BreakpointsReference.WindowSize
-          // },
-          direction: GridRowDirection.Row
-        }) {
-          ForEach(['1', '2', '3'], (color: Color) => {
-            GridCol({
-              span: 1,
-              offset: 0,
-              order: 0
-            }) {
-              Column() {
+        List({ space: 10, initialIndex: 0 }) {
+          ForEach(Array.from({ length: 20 }), (item: string, index: number) => {
+            ListItem() {
+              Flex({
+                direction: this.isBoxStyle ? FlexDirection.Column : FlexDirection.Row,
+                alignItems: ItemAlign.Center
+              }) {
                 Image($r('app.media.classify01'))
-                  .width(120)
+                  .width(150)
+
                 Column() {
                   Text('Mate 60 Pro')
                     .fontSize(14)
-                  Text('6.88mm轻薄可靠|鸿蒙AI趣玩|后置5000万悬停自拍')
+                  Text('6.88mm轻薄可靠|鸿蒙AI趣玩鸿蒙AI趣玩鸿蒙AI趣玩鸿蒙AI趣玩鸿蒙AI趣玩|后置5000万悬停自拍')
                     .fontSize(12)
                     .fontColor('#666')
                     .margin({ top: 6, bottom: 6 })
-                    .textOverflow({
-                      overflow: TextOverflow.Ellipsis
-                    })
                     .maxLines(1)
-
+                  Blank()
                   Text('￥4599')
                     .fontSize(14)
                     .fontWeight(600)
                 }
                 .alignItems(HorizontalAlign.Start)
+                .width(this.isBoxStyle ? '100%' : 200)
+                .height(140)
+                .padding({
+                  left: 10,
+                  right: 10,
+                  top: 20,
+                  bottom: 20
+                })
               }
               .width('100%')
               .backgroundColor('#fff')
-              .padding(8)
+              // .padding(10)
               .borderRadius(12)
             }
-          })
-        }.width("100%").height("100%")
-        .onBreakpointChange((breakpoint) => {
-          // this.currentBp = breakpoint
-        })
-      }.width('100%').padding({ left: 10, top: 8, right: 10 })
+          }, (item: string) => item)
+        }
+        .friction(0.6)
+        // .lanes({ minLength: 100, maxLength: 100 })
+        .lanes(this.isBoxStyle ? 2 : 1, 10)
+        .alignListItem(ListItemAlign.Center)
+        .scrollBar(BarState.Off)
+      }
+      .width('100%')
+      .padding({ left: 10, top: 8, right: 10 })
 
       // 筛选
       if (this.drawerShow) {
