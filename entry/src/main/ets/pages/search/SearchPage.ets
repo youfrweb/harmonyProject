@@ -13,6 +13,7 @@ interface RouterParams {
 struct SearchPage {
   @State searchValue: string = ''
   @State tipList: string[] = []
+  // 最近搜索
   @StorageLink(RECENT_SEARCH_LIST) recentSearchList: string[] = []
   @StorageLink(SEARCH_TIP) searchTip: string = ''
   @State routerParams: RouterParams = {}
@@ -30,6 +31,19 @@ struct SearchPage {
     }
   }
 
+  // 搜索处理函数
+  searchTipHandler(value: string) {
+    router.pushUrl({
+      url: 'pages/search/SearchShowPage',
+      params: { searchTip: value }
+    })
+    const index = this.recentSearchList.findIndex(item => item === value)
+    if (index !== -1) { // 数据存在需要提到第一个
+      this.recentSearchList.splice(index, 1)
+    }
+    this.recentSearchList.unshift(value)
+  }
+
   @Builder
   searchTipButtonBuilder(item: string) {
     Button(item)
@@ -39,10 +53,7 @@ struct SearchPage {
       .margin({ right: 10, top: 10 })
       .onClick(() => {
         // 快捷点击搜索点击处理
-        router.pushUrl({
-          url: 'pages/search/SearchShowPage',
-          params: { searchTip: item }
-        })
+        this.searchTipHandler(item)
       })
   }
 
@@ -69,15 +80,7 @@ struct SearchPage {
           .fontColor(Color.Black)
           .onClick(() => {
             const value: string = this.searchValue || this.searchTip
-            router.pushUrl({
-              url: 'pages/search/SearchShowPage',
-              params: { searchTip: value }
-            })
-            const index = this.recentSearchList.findIndex(item => item === value)
-            if (index !== -1) {
-              this.recentSearchList.splice(index, 1)
-            }
-            this.recentSearchList.unshift(value)
+            this.searchTipHandler(value)
           })
       }
 
