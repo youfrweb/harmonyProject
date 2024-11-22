@@ -47,9 +47,11 @@ struct Activity {
   }
 
   build() {
+
     Tabs({ index: $$this.currentIndex }) {
       ForEach(this.bars, (item: TabType, index: number) => {
         TabContent() {
+          
           this.TabEachBuilder(index)
         }.tabBar(this.TabBarBuilder(item, index))
         .padding({ left: 15, right: 15 })
@@ -61,3 +63,4 @@ struct Activity {
 }
 
 export default Activity
+

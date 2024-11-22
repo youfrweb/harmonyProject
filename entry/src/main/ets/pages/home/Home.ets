@@ -5,6 +5,7 @@ import HomeSubarea from './main/HomeSubarea';
 import HomeTab from './main/HomeTab';
 import HomeWelfare from './main/HomeWelfare';
 import HomeHeader from './main/HomeHeader';
+import GoodPick from '../../components/common/GoodPick';
 
 @Component
 struct Home {
@@ -46,6 +47,9 @@ struct Home {
           HomeSubarea()
           // 专区3
           HomeSubarea()
+          // 精选好物
+          GoodPick()
+            .margin({ left: 15, right: 15 })
         }
         .width('100%')
         .margin({ bottom: 15 })

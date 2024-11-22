@@ -61,7 +61,7 @@ struct Index {
     } else if (index === 1) {
       Classify()
     } else if (index === 2) {
-      Activity()
+      Activity() // 发现
     } else if (index === 3) {
       ShoppingCart()
     } else {
