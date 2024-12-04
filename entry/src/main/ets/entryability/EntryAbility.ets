@@ -1,6 +1,6 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
+import { font, window } from '@kit.ArkUI';
 import { RECENT_SEARCH_LIST } from '../utils/constant';
 
 export default class EntryAbility extends UIAbility {
@@ -25,6 +25,12 @@ export default class EntryAbility extends UIAbility {
 
       // 初始化数据持久化
       PersistentStorage.persistProp<string[]>(RECENT_SEARCH_LIST, [])
+
+      // // 页面加载就注册iconfont
+      // font.registerFont({
+      //   familyName: 'sysFont',
+      //   familySrc: '/utils/font/iconfont.ttf'
+      // })
     });
   }
 

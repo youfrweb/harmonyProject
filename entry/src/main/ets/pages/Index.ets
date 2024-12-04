@@ -6,11 +6,15 @@ import UserCenter from './userCenter/UserCenter'
 
 import { AxiosError, AxiosResponse } from '@ohos/axios';
 import IndexApi from '../api/home';
-import { font } from '@kit.ArkUI'
+import { font, router } from '@kit.ArkUI'
 
 interface MenuItemType {
   icon: string,
   text: string
+}
+
+interface ParamsType {
+  index: number
 }
 
 @Entry
@@ -32,12 +36,14 @@ struct Index {
       familySrc: '/utils/font/iconfont.ttf'
     })
 
+    // 功能直达进入页面
+    this.currentIndex = (router.getParams() as ParamsType)?.index || 0
     // 请求案例
-    IndexApi.getList().then((res: AxiosResponse) => {
-      console.log('list数据', JSON.stringify(res))
-    }).catch((err: AxiosError) => {
-      console.log('err', err)
-    })
+    // IndexApi.getList().then((res: AxiosResponse) => {
+    //   console.log('list数据', JSON.stringify(res))
+    // }).catch((err: AxiosError) => {
+    //   console.log('err', err)
+    // })
   }
 
   // 菜单样式

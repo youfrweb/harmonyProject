@@ -1,3 +1,5 @@
+import { router } from "@kit.ArkUI"
+
 @Component
 export struct HomeRecommend {
   build() {
@@ -44,11 +46,13 @@ export struct HomeRecommend {
               .margin({
                 top: 8
               })
-              .padding({bottom: 20})
+              .padding({ bottom: 20 })
             }
             .alignItems(HorizontalAlign.Start)
+            .onClick(() => {
+              router.pushUrl({ url: 'pages/product/ProductDetail' })
+            })
           })
-
         }
         .autoPlay(true)
         .indicator(
