@@ -15,6 +15,7 @@
 9. 页面跳转
 10. 搜索模块（数据持久化）
 11. 视频模块
+12. 商品详情
 
 **效果图**
 
@@ -27,4 +28,8 @@
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage07.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage08.png)
 ![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage09.png)
+详情
+![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage10.png)
+![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage101.png)
+![image](https://github.com/youfrweb/harmonyProject/blob/master/projectImages/projectImage102.png)
 
